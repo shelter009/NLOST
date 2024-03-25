@@ -1,10 +1,10 @@
 
 ###  A sample test on fk data with spatial size 256 
 python validate_fk.py \
---fk_data_path /data/yueli/dataset/NLOS_RW/align_fk_256_512 \
+--fk_data_path /content/drive/MyDrive/preFK/align_fk_256_512 \
 --target_size 256 \
---output_path /data/yueli/code/NLOST/pretrain/256_fk \
---pretrained_model /data/yueli/code/NLOST/pretrain/size256.pth
+--output_path /content/drive/MyDrive/preFK/output \
+--pretrained_model /content/drive/MyDrive/NLOST/pretrain/size256.pth
 
 ###  A sample test on our data  with spatial size 256 
 python validate_ours.py \
