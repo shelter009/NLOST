@@ -26,7 +26,7 @@ def list_file_path_bike(root_path, fortrain=TRUE, shineness=[0]):
             modeldir_all = sorted(modeldir_all)  # sort
             modeldir_all.reverse()
             
-            # print(modeldir_all)
+            #print(modeldir_all)
             
             for modeldir in modeldir_all[:250]:
                 rotdirs = glob.glob('%s/shin*' % (modeldir))  # file_path/0/XXX/shinexxx_rot xxx
@@ -99,6 +99,7 @@ class LFEDataset(Dataset):
         assert color in ('rgb', 'gray', 'r', 'g', 'b'), \
             'invalid color: {:s}'.format(color)
         self.data_list = list_file_path_bike(root, for_train, shineness)
+        print(self.data_list['img'])
         self.color = color
     
     def _load_meas(self, idx):
